@@ -1,4 +1,4 @@
-class String_Lexicographical_Sort{
+class String_Lexicographical_Sort {
     public static void main(String s[]) {
         Arrange sort = new Arrange(s);
 

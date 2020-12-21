@@ -1,8 +1,6 @@
 class SmallLetterExceptionHandler extends Exception {
-    private static final long serialVersionUID = 1L;
-
-    public SmallLetterExceptionHandler(String mssg) {
-        super(mssg);
+    SmallLetterExceptionHandler(String mssg) {
+        System.out.print(mssg);
     }
 }
 
@@ -13,9 +11,9 @@ class SmallLetter{
         ab = s.charAt(0);
 
         if(ab >= 97 && ab <= 122)
-            throw new SmallLetterExceptionHandler("First Letter is lowercase...");
+            throw new SmallLetterExceptionHandler("First Letter is lowercase : ");
         else   
-            System.out.println(s);
+            System.out.println("\n"+s);
     }
     public static void main(String args[]){
         SmallLetter obj = new SmallLetter();
@@ -25,7 +23,7 @@ class SmallLetter{
                 obj.checkLetter(args[i]);
             }
             catch(Exception e){
-                System.out.println(e);
+                e.printStackTrace();
             }
         }
     }
